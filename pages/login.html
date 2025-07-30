@@ -18,6 +18,7 @@
     />
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="../styles/login.css" />
+    <script src="../scripts/accedi.js"></script>
   </head>
 
   <body>
@@ -61,14 +62,14 @@
               <input
                 type="email"
                 class="form-control"
-                id="exampleFormControlInput1"
+                id="inputEmail"
                 placeholder="name@example.com"
               />
             </div>
             <label for="inputPassword5" class="form-label">Password</label>
             <input
               type="password"
-              id="inputPassword5"
+              id="inputPassword"
               class="form-control"
               aria-describedby="passwordHelpBlock"
             />
@@ -78,7 +79,12 @@
               emoji.
             </div>
             <div class="btn-accedi">
-              <button type="button" class="btn-success btn-cerca">
+              <button
+                onclick="accedi()"
+                type="button"
+                class="btn-success btn-cerca"
+                id="accedere"
+              >
                 Accedi
               </button>
             </div>

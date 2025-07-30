@@ -18,6 +18,7 @@
     />
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="../styles/contatti.css" />
+    <script src="../scripts/contatti.js"></script>
   </head>
 
   <body>
@@ -52,6 +53,7 @@
                     type="text"
                     class="form-control"
                     id="f-nome"
+                    name="nome"
                     placeholder="Mario Rossi"
                   />
                   <div class="invalid-feedback" id="nomeError"></div>
@@ -64,6 +66,7 @@
                     type="email"
                     class="form-control"
                     id="f-email"
+                    name="email"
                     placeholder="mariorossi@esempio.com"
                   />
                   <div class="invalid-feedback" id="emailError"></div>
@@ -73,12 +76,18 @@
                   <textarea
                     class="form-control"
                     id="f-messaggio"
+                    name="messaggio"
                     rows="3"
                   ></textarea>
                   <div class="invalid-feedback" id="messaggioError"></div>
                 </div>
                 <div class="d-grid">
-                  <button type="submit" id="btn-invia" class="btn btn-invia">
+                  <button
+                    onclick="inviaMessaggio()"
+                    type="submit"
+                    id="btn-invia"
+                    class="btn btn-invia"
+                  >
                     Invia
                   </button>
                 </div>
