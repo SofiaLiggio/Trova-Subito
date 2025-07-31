@@ -1,16 +1,61 @@
 const contactMessage = document.getElementById("contactMessage");
+const accedi_form = document.getElementById("contactForm");
 
 // localStorage accedi
 function accedi() {
   const input_email = document.getElementById("inputEmail");
   const value_email = input_email.value;
-  //   console.log(value_email);
-  localStorage.setItem("email", value_email);
+  const email_accedi_error = document.getElementById("emailAccediError");
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  let em_acc_valid = true;
+
+  if (value_email === "") {
+    email_accedi_error.textContent = "Il campo Indirizzo email è obbligatorio";
+    input_email.classList.add("is-invalid");
+    input_email.classList.remove("is-valid");
+    em_acc_valid = false;
+  } else if (!emailRegex.test(value_email)) {
+    email_accedi_error.textContent = "L'indirizzo email non è valido";
+    input_email.classList.add("is-invalid");
+    input_email.classList.remove("is-valid");
+    em_acc_valid = false;
+  } else {
+    email_accedi_error.textContent = "";
+    input_email.classList.remove("is-invalid");
+    input_email.classList.add("is-valid");
+  }
 
   const input_password = document.getElementById("inputPassword");
   const value_password = input_password.value;
-  //   console.log(value_password);
-  localStorage.setItem("password", value_password);
+  const password_accedi_error = document.getElementById("passwordAccediError");
+  const passwordRegex = /^[a-zA-Z0-9]{8,20}$/;
+  let pass_acc_valid = true;
+
+  if (value_password === "") {
+    password_accedi_error.textContent = "Il campo Password è obbligatorio";
+    input_password.classList.add("is-invalid");
+    input_password.classList.remove("is-valid");
+    pass_acc_valid = false;
+  } else if (!passwordRegex.test(value_password)) {
+    password_accedi_error.textContent = "La password non è valida";
+    input_password.classList.add("is-invalid");
+    input_password.classList.remove("is-valid");
+    pass_acc_valid = false;
+  } else {
+    password_accedi_error.textContent = "";
+    input_password.classList.remove("is-invalid");
+    input_password.classList.add("is-valid");
+  }
+
+  if (em_acc_valid && pass_acc_valid) {
+    // se tutti i campi sono validi, salva in localStorage
+    localStorage.setItem("email", value_email);
+    localStorage.setItem("password", value_password);
+
+    contactMessage.textContent = "Dati salvati!";
+    contactMessage.className = "mt-3 alert alert-success";
+    accedi_form.reset();
+  }
 }
 
 // localStorage registrati
@@ -80,8 +125,8 @@ function registrati() {
     confirmPasswordIsValid = false;
   } else if (!confirmPasswordRegex.test(value_reg_conferma_password)) {
     confirm_password_error.textContent = "La password non è valida";
-    input_reg_confirm_password.classList.add("is-invalid");
-    input_reg_confirm_password.classList.remove("is-valid");
+    input_reg_conferma_password.classList.add("is-invalid");
+    input_reg_conferma_password.classList.remove("is-valid");
     confirmPasswordIsValid = false;
   } else {
     confirm_password_error.textContent = "";
