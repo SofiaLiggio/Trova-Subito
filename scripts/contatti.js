@@ -76,11 +76,11 @@ function inviaMessaggio() {
       localStorage.setItem("nome", nome);
       localStorage.setItem("email", email);
       localStorage.setItem("messaggio", msg);
-    }
 
-    contactMessage.textContent =
-      "Messaggio inviato con successo e dati salvati!";
-    contactMessage.className = "mt-3 alert alert-success";
-    form.reset();
+      contactMessage.textContent =
+        "Messaggio inviato con successo e dati salvati!";
+      contactMessage.className = "mt-3 alert alert-success";
+      form.reset();
+    }
   });
 }
