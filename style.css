@@ -16,6 +16,12 @@
   background-color: #45a88e;
 }
 
+#main-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+}
+
 .navbar-brand {
   transition: background-color 0.3s ease, color 0.3s ease;
   padding: 8px 12px;
@@ -26,12 +32,6 @@
   color: #ffffff;
   border-radius: 5px;
   text-decoration: none;
-}
-
-#header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
 }
 
 .search-container {

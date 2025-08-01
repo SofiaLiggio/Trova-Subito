@@ -20,35 +20,41 @@
     <script src="./script.js"></script>
   </head>
   <body>
-    <!-- Header con barra di ricerca -->
-    <header id="header">
-      <nav class="navbar border-bottom border-body" data-bs-theme="dark">
-        <div class="container-md">
-          <a class="navbar-brand" href="./index.html">Home</a>
-          <a class="navbar-brand" href="./pages/categorie.html">Categorie</a>
-          <a class="navbar-brand" href="./pages/inserisci_annuncio.html"
-            >Inserisci annuncio</a
-          >
-          <a class="navbar-brand" href="./pages/contatti.html">Contatti </a>
+    <nav
+      id="main-navbar"
+      class="navbar border-bottom border-body"
+      data-bs-theme="dark"
+    >
+      <div class="container-md">
+        <a class="navbar-brand" href="./index.html">Home</a>
+        <a class="navbar-brand" href="./pages/categorie.html">Categorie</a>
+        <a class="navbar-brand" href="./pages/inserisci_annuncio.html"
+          >Inserisci annuncio</a
+        >
+        <a class="navbar-brand" href="./pages/contatti.html">Contatti </a>
 
-          <a class="navbar-brand" href="./pages/login.html">Login</a>
+        <a class="navbar-brand" href="./pages/login.html">Login</a>
+      </div>
+    </nav>
+    <!-- Header con barra di ricerca -->
+    <div id="main-sticky-wrapper">
+      <header id="header">
+        <div class="container-logo">
+          <img src="./imgs/logo.png" alt="Logo" width="50" height="50" />
+          <h1 class="title">Trova Subito</h1>
         </div>
-      </nav>
-      <div class="container-logo">
-        <img src="./imgs/logo.png" alt="Logo" width="50" height="50" />
-        <h1 class="title">Trova Subito</h1>
-      </div>
-      <div class="search-container">
-        <input
-          type="text"
-          class="search-input"
-          placeholder="Cosa cerchi?"
-          aria-label="Cerca"
-          aria-describedby="addon-wrapping"
-        />
-        <button type="submit" class="btn-success btn-cerca">Cerca</button>
-      </div>
-    </header>
+        <div class="search-container">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Cosa cerchi?"
+            aria-label="Cerca"
+            aria-describedby="addon-wrapping"
+          />
+          <button type="submit" class="btn-success btn-cerca">Cerca</button>
+        </div>
+      </header>
+    </div>
 
     <div class="select-containers">
       <!-- Filtro per categoria -->
@@ -81,10 +87,8 @@
         >
           <option selected>Ordina per</option>
           <option value="1">Data (dal più recente al meno recente)</option>
-          <option value="2">
-            Prezzo (dal più basso al più alto e viceversa)
-          </option>
-          <option value="3">Titolo (ordine alfabetico A-Z e Z-A)</option>
+          <option value="2">Prezzo (dal più basso al più alto)</option>
+          <option value="3">Titolo (ordine alfabetico A-Z)</option>
         </select>
       </div>
     </div>
