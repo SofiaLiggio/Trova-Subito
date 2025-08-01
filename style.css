@@ -18,10 +18,11 @@
 
 .navbar-brand {
   transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 8px 12px;
 }
 
 .navbar-brand:hover {
-  background-color: #6fb09fff;
+  background-color: #196f58ff;
   color: #ffffff;
   border-radius: 5px;
   text-decoration: none;
