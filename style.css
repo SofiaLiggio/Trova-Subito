@@ -27,6 +27,12 @@
   text-decoration: none;
 }
 
+#header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
 .search-container {
   display: flex;
   justify-content: center;
@@ -68,4 +74,17 @@
 
 .btn-cerca:hover {
   background-color: #196f58ff;
+}
+
+.select-containers {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  align-items: flex-start;
+}
+
+.select-containers .form-select {
+  text-align: center;
+  padding-right: 25px;
 }

@@ -1,15 +1,12 @@
 function inviaMessaggio() {
   const input_name = document.getElementById("f-nome");
   const value_name = input_name.value;
-  localStorage.setItem("nome", value_name);
 
   const input_email = document.getElementById("f-email");
   const value_email = input_email.value;
-  localStorage.setItem("email", value_email);
 
   const input_msg = document.getElementById("f-messaggio");
   const value_msg = input_msg.value;
-  localStorage.setItem("messaggio", value_msg);
 
   const form = document.getElementById("contactForm");
   const contactMessage = document.getElementById("contactMessage");
