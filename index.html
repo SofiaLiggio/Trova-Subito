@@ -21,7 +21,7 @@
   </head>
   <body>
     <!-- Header con barra di ricerca -->
-    <header>
+    <header id="header">
       <nav class="navbar border-bottom border-body" data-bs-theme="dark">
         <div class="container-md">
           <a class="navbar-brand" href="./index.html">Home</a>
@@ -40,15 +40,54 @@
       </div>
       <div class="search-container">
         <input
-          type="search"
+          type="text"
           class="search-input"
           placeholder="Cosa cerchi?"
           aria-label="Cerca"
           aria-describedby="addon-wrapping"
         />
-        <button type="button" class="btn-success btn-cerca">Cerca</button>
+        <button type="submit" class="btn-success btn-cerca">Cerca</button>
       </div>
     </header>
+
+    <div class="select-containers">
+      <!-- Filtro per categoria -->
+      <div id="categorie-container" class="grid-container">
+        <select
+          class="form-select search-input"
+          aria-label="Default select example"
+          id="select-categorie"
+        >
+          <option selected>Categorie</option>
+        </select>
+      </div>
+      <!-- Filtro per città -->
+
+      <div id="citta-container" class="list-container">
+        <select
+          class="form-select search-input"
+          aria-label="Default select example"
+          id="select-citta"
+        >
+          <option selected>Città</option>
+        </select>
+      </div>
+      <!-- Opzioni di ordinamento -->
+      <div>
+        <select
+          class="form-select search-input"
+          aria-label="Default select example"
+          id="select-order"
+        >
+          <option selected>Ordina per</option>
+          <option value="1">Data (dal più recente al meno recente)</option>
+          <option value="2">
+            Prezzo (dal più basso al più alto e viceversa)
+          </option>
+          <option value="3">Titolo (ordine alfabetico A-Z e Z-A)</option>
+        </select>
+      </div>
+    </div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"

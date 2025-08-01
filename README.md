@@ -1,2 +1,3 @@
 # Trova-Subito
-Creation of a website similar to www.subito.it.
+
+Creation of a website similar to subito.it.
