@@ -39,6 +39,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     <p class="card-text"><small class="text-muted">Pubblicato il: ${new Date(
                       ad.data_pubblicazione
                     ).toLocaleDateString("it-IT")}</small></p>
+                    <a href="pages/dettaglio.html?id=${
+                      ad.id
+                    }" class= "btn btn-custom mt-auto ">Scopri di più</a>
                 </div>
             </div>
         `;
@@ -159,21 +162,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Event Listener per il filtro per categoria
     selectCategorie.addEventListener("change", (event) => {
-      currentCategory = event.target.value;
+      const selectedValue = event.target.value;
+      if (selectedValue === "tutte") {
+        currentCategory = "";
+      } else {
+        currentCategory = selectedValue;
+      }
       console.log("Categoria selezionata:", currentCategory);
       applyFiltersAndSort();
     });
 
     // Event Listener per il filtro per città
     selectCitta.addEventListener("change", (event) => {
-      currentCity = event.target.value;
+      const selectedValue = event.target.value;
+      if (selectedValue === "tutte") {
+        currentCity = "";
+      } else {
+        currentCity = selectedValue;
+      }
       console.log("Città selezionata:", currentCity);
       applyFiltersAndSort();
     });
 
     // Event Listener per il menu di ordinamento
     selectOrdina.addEventListener("change", (event) => {
-      currentOrder = event.target.value;
+      const selectedValue = event.target.value;
+      if (selectedValue === "tutte") {
+        currentOrder = "";
+      } else {
+        currentOrder = selectedValue;
+      }
       console.log("Ordinamento selezionato:", currentOrder);
       applyFiltersAndSort();
     });
