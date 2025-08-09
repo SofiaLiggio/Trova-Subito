@@ -63,7 +63,8 @@
   box-shadow: 0 0 0 3px rgba(255, 87, 51, 0.4);
 }
 
-.btn-cerca {
+.btn-cerca,
+.btn-custom {
   background-color: #45a88e;
   color: white;
   padding: 10px 20px;
@@ -73,8 +74,10 @@
   transition: background-color 0.3s ease;
 }
 
-.btn-cerca:hover {
+.btn-cerca:hover,
+.btn-custom:hover {
   background-color: #196f58ff;
+  color: white;
 }
 
 .select-containers {
